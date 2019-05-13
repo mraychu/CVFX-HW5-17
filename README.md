@@ -8,17 +8,17 @@ This assignment want to leverage feature extraction and matching technique using
 ### a. Motion parallax
 > 由 3 張原圖組成的 gif
 
-![image alt](https://media.giphy.com/media/Xc4p364xzbmRMmCT80/giphy.gif)
+<img src="./images/giphy.gif" width="500px">
 
 ### b. Stop motion
 > 由 5 張原圖組成的 gif
 
-![image alt](https://imgur.com/TlJnKxG.gif)
+<img src="./images/TlJnKxG.gif" width="500px">
 
 ### c. Live photo
 > 由 36 張原圖組成的 gif
 
-![image alt](https://imgur.com/vfINe8z.gif)
+<img src="./images/vfINe8z.gif" width="500px">
 
 
 ## 2. Show image alignment results between different images
@@ -81,7 +81,7 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 
 Result:
 
-![image alt](https://i.imgur.com/nna9wYp.gif)
+<img src="./images/nna9wYp.gif" width="500px">
 
 ## 4. Exploit creativity to add some image processing to enhance effect
 ### Image Blurring
@@ -91,7 +91,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | Before | After |
 | -------- | -------- |
-| ![](https://i.imgur.com/r8wezq7.gif) |![](https://i.imgur.com/6dilcV2.gif) |
+| <img src="./images/r8wezq7.gif" width="500px"> | <img src="./images/6dilcV2.gif" width="500px"> |
 
 ## 5. Bonus - Complete the above 2 different effects
 - Stop motion
@@ -103,11 +103,11 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | 正面且對準 | 歪斜 | 仰角 |
 | -------- | -------- | -------- | 
-| ![](https://imgur.com/7lcVc9x.png) | ![](https://imgur.com/b8Fkli4.png) | ![](https://imgur.com/iAYz06d.png) |
+| ![](https://imgur.com/7lcVc9x.jpg) | ![](https://imgur.com/b8Fkli4.jpg) | ![](https://imgur.com/iAYz06d.jpg) |
 
 Result:
 
-![image alt](https://imgur.com/D2ZuIFl.gif)
+<img src="./images/D2ZuIFl.gif" width="500px">
 
 - Live photo
 > 此 Visual Effect 實作的流程如下。
@@ -116,11 +116,11 @@ Result:
 
 如同 Motion parallax 先將原本的 36 張圖片用 ORB 取出 2000 個 feature points, 並利用 optical flow 回推出逼近的 cameara moving path, 並用 warpAffine 反向移動 image, 使得理論上的 camera  moving path 為 0, 以下 gif 為 stable 後的成果。
 
-![image alt](https://imgur.com/Tb6wOYN.gif)
+<img src="./images/Tb6wOYN.gif" width="500px">
 
 接著以第一張圖片為基礎, 將流水的部分從後面的圖片取 pixel 值依序貼上代替，最後再將邊框以及整張圖片做 blur 就可以得到最終成品。
 
 Result: 
 
-![image alt](https://i.imgur.com/6dilcV2.gif)
+<img src="./images/6dilcV2.gif" width="500px">
 
