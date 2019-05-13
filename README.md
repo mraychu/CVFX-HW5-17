@@ -96,8 +96,8 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 ## 5. Bonus - Complete the above 2 different effects
 - Stop motion
 > 此 Visual Effect 實作的流程如下。
-    1. 良好的拍攝手法
-    2. 將多張圖片以 gif 的方法呈現，播放順序: 1->2->3->4->5->4->3->2->1
+> 1. 良好的拍攝手法
+> 2. 將多張圖片以 gif 的方法呈現，播放順序: 1->2->3->4->5->4->3->2->1
 
 由於 Stop motion 是 Motion parallax 的延伸，以及課堂中也有提到關於相機校正 (Camera Calibration) 的作法，像是 Pinhole Camera，所以此視覺效果已透過手機 App 拍攝的方式來完成。攝影軟體 **@picn2k** 的輔助線能夠讓我們調整好相機的仰角確保整個畫面是正的，以及九宮格能將物體對準在畫面相同的位置。
 
@@ -111,8 +111,8 @@ Result:
 
 - Live photo
 > 此 Visual Effect 實作的流程如下。
-    1. Image Alignment
-    2. Crop and paste pixels
+> 1. Image Alignment
+> 2. Crop and paste pixels
 
 如同 Motion parallax 先將原本的 36 張圖片用 ORB 取出 2000 個 feature points, 並利用 optical flow 回推出逼近的 cameara moving path, 並用 warpAffine 反向移動 image, 使得理論上的 camera  moving path 為 0, 以下 gif 為 stable 後的成果。
 
