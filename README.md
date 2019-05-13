@@ -66,12 +66,10 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 
 | Before | After |
 | -------- | -------- |
-| ![](https://i.imgur.com/L94BgDs.jpg)|![](https://i.imgur.com/04JSiBt.jpg)
- |
-|![](https://i.imgur.com/zdlNzmZ.jpg)| ![](https://i.imgur.com/dv5gwZg.jpg)
-|
-|![](https://i.imgur.com/feEdSns.jpg)|  ![](https://i.imgur.com/049Qk58.jpg)
-|
+| ![](https://i.imgur.com/L94BgDs.jpg)| ![](https://i.imgur.com/04JSiBt.jpg) |
+| ![](https://i.imgur.com/zdlNzmZ.jpg)| ![](https://i.imgur.com/dv5gwZg.jpg) |
+| ![](https://i.imgur.com/feEdSns.jpg)| ![](https://i.imgur.com/049Qk58.jpg) |
+
 另外由於圖片進行仿射變形後，邊緣容易有黑邊，我們使用`cv2.getRotationMatrix2D`來讓每張圖片中心不變，放大 1.04 倍。
 
 ### Output GIF
@@ -93,7 +91,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | Before | After |
 | -------- | -------- |
-| ![](https://i.imgur.com/r8wezq7.gif) |![](https://i.imgur.com/6dilcV2.gif)
+| ![](https://i.imgur.com/r8wezq7.gif) |![](https://i.imgur.com/6dilcV2.gif) |
 
 ## 5. Bonus - Complete the above 2 different effects
 - Stop motion
@@ -105,7 +103,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | 正面且對準 | 歪斜 | 仰角 |
 | -------- | -------- | -------- | 
-| ![](https://imgur.com/7lcVc9x.png) |![](https://imgur.com/b8Fkli4.png) | ![](https://imgur.com/iAYz06d.png)
+| ![](https://imgur.com/7lcVc9x.png) | ![](https://imgur.com/b8Fkli4.png) | ![](https://imgur.com/iAYz06d.png) |
 
 Result:
 
