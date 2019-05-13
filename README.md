@@ -13,12 +13,12 @@ This assignment want to leverage feature extraction and matching technique using
 ### b. Stop motion
 > 由 5 張原圖組成的 gif
 
-![](https://imgur.com/TlJnKxG.gif)
+![image alt](https://imgur.com/TlJnKxG.gif)
 
 ### c. Live photo
 > 由 36 張原圖組成的 gif
 
-![](https://imgur.com/vfINe8z.gif)
+![image alt](https://imgur.com/vfINe8z.gif)
 
 
 ## 2. Show image alignment results between different images
@@ -66,12 +66,10 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 
 | Before | After |
 | -------- | -------- |
-| ![](https://i.imgur.com/L94BgDs.jpg)|![](https://i.imgur.com/04JSiBt.jpg)
- |
-|![](https://i.imgur.com/zdlNzmZ.jpg)| ![](https://i.imgur.com/dv5gwZg.jpg)
-|
-|![](https://i.imgur.com/feEdSns.jpg)|  ![](https://i.imgur.com/049Qk58.jpg)
-|
+| ![](https://i.imgur.com/L94BgDs.jpg)| ![](https://i.imgur.com/04JSiBt.jpg) |
+| ![](https://i.imgur.com/zdlNzmZ.jpg)| ![](https://i.imgur.com/dv5gwZg.jpg) |
+| ![](https://i.imgur.com/feEdSns.jpg)| ![](https://i.imgur.com/049Qk58.jpg) |
+
 另外由於圖片進行仿射變形後，邊緣容易有黑邊，我們使用`cv2.getRotationMatrix2D`來讓每張圖片中心不變，放大 1.04 倍。
 
 ### Output GIF
@@ -83,7 +81,7 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 
 Result:
 
-![](https://i.imgur.com/nna9wYp.gif)
+![image alt](https://i.imgur.com/nna9wYp.gif)
 
 ## 4. Exploit creativity to add some image processing to enhance effect
 ### Image Blurring
@@ -93,7 +91,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | Before | After |
 | -------- | -------- |
-| ![](https://i.imgur.com/r8wezq7.gif) |![](https://i.imgur.com/6dilcV2.gif)
+| ![](https://i.imgur.com/r8wezq7.gif) |![](https://i.imgur.com/6dilcV2.gif) |
 
 ## 5. Bonus - Complete the above 2 different effects
 - Stop motion
@@ -105,11 +103,11 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 | 正面且對準 | 歪斜 | 仰角 |
 | -------- | -------- | -------- | 
-| ![](https://imgur.com/7lcVc9x.png) |![](https://imgur.com/b8Fkli4.png) | ![](https://imgur.com/iAYz06d.png)
+| ![](https://imgur.com/7lcVc9x.png) | ![](https://imgur.com/b8Fkli4.png) | ![](https://imgur.com/iAYz06d.png) |
 
 Result:
 
-![](https://imgur.com/D2ZuIFl.gif)
+![image alt](https://imgur.com/D2ZuIFl.gif)
 
 - Live photo
 > 此 Visual Effect 實作的流程如下。
@@ -118,11 +116,11 @@ Result:
 
 如同 Motion parallax 先將原本的 36 張圖片用 ORB 取出 2000 個 feature points, 並利用 optical flow 回推出逼近的 cameara moving path, 並用 warpAffine 反向移動 image, 使得理論上的 camera  moving path 為 0, 以下 gif 為 stable 後的成果。
 
-![](https://imgur.com/Tb6wOYN.gif)
+![image alt](https://imgur.com/Tb6wOYN.gif)
 
 接著以第一張圖片為基礎, 將流水的部分從後面的圖片取 pixel 值依序貼上代替，最後再將邊框以及整張圖片做 blur 就可以得到最終成品。
 
 Result: 
 
-![](https://i.imgur.com/6dilcV2.gif)
+![image alt](https://i.imgur.com/6dilcV2.gif)
 
