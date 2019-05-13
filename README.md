@@ -13,12 +13,12 @@ This assignment want to leverage feature extraction and matching technique using
 ### b. Stop motion
 > 由 5 張原圖組成的 gif
 
-![](https://imgur.com/TlJnKxG.gif)
+![image alt](https://imgur.com/TlJnKxG.gif)
 
 ### c. Live photo
 > 由 36 張原圖組成的 gif
 
-![](https://imgur.com/vfINe8z.gif)
+![image alt](https://imgur.com/vfINe8z.gif)
 
 
 ## 2. Show image alignment results between different images
@@ -81,7 +81,7 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 
 Result:
 
-![](https://i.imgur.com/nna9wYp.gif)
+![image alt](https://i.imgur.com/nna9wYp.gif)
 
 ## 4. Exploit creativity to add some image processing to enhance effect
 ### Image Blurring
@@ -107,7 +107,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 
 Result:
 
-![](https://imgur.com/D2ZuIFl.gif)
+![image alt](https://imgur.com/D2ZuIFl.gif)
 
 - Live photo
 > 此 Visual Effect 實作的流程如下。
@@ -116,11 +116,11 @@ Result:
 
 如同 Motion parallax 先將原本的 36 張圖片用 ORB 取出 2000 個 feature points, 並利用 optical flow 回推出逼近的 cameara moving path, 並用 warpAffine 反向移動 image, 使得理論上的 camera  moving path 為 0, 以下 gif 為 stable 後的成果。
 
-![](https://imgur.com/Tb6wOYN.gif)
+![image alt](https://imgur.com/Tb6wOYN.gif)
 
 接著以第一張圖片為基礎, 將流水的部分從後面的圖片取 pixel 值依序貼上代替，最後再將邊框以及整張圖片做 blur 就可以得到最終成品。
 
 Result: 
 
-![](https://i.imgur.com/6dilcV2.gif)
+![image alt](https://i.imgur.com/6dilcV2.gif)
 
