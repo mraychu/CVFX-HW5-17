@@ -60,7 +60,8 @@ curr_pts, status, err = cv2.calcOpticalFlowPyrLK(prev_gray, curr_gray, prev_pts,
 ```
 但由於有些特徵點在下一個 frame 中不一定 track 得到（可能被遮住或消失），因此我們需要用`status`這個 flag 來過濾掉這些點，只選擇`status`為 1 的特徵點來做計算，再使用`estimateAffine2D`來計算 transformation matrix。
 
-$\begin{align*} T = \begin{bmatrix} \cos \theta & -\sin \theta & x \\ \sin \theta & \cos \theta & y \\ \end{bmatrix} \end{align*}$
+<img src="./images/transformation_matrix.png" width="300px">
+
 
 計算出 transformation matrix 後，我們可以得出移動軌跡`trajectory`，也就可以反推出每個 frame 需要位移多少量才能得到相機固定的效果。再使用`cv2.warpAffine`對圖片進行仿射變形。
 
