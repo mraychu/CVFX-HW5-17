@@ -100,7 +100,7 @@ There are many blurring techniques provided by OpenCV. We choose GaussianBlur in
 > 1. 良好的拍攝手法
 > 2. 將多張圖片以 gif 的方法呈現，播放順序: 1->2->3->4->5->4->3->2->1
 
-由於 Stop motion 是 Motion parallax 的延伸，以及課堂中也有提到關於相機校正 (Camera Calibration) 的作法，像是 Pinhole Camera，所以此視覺效果已透過手機 App 拍攝的方式來完成。攝影軟體 **@picn2k** 的輔助線能夠讓我們調整好相機的仰角確保整個畫面是正的，以及九宮格能將物體對準在畫面相同的位置。
+由於 Stop motion 是 Motion parallax 的延伸，以及課堂中也有提到關於相機校正 (Camera Calibration) 的作法，像是 Pinhole Camera，所以此視覺效果透過手機 App 拍攝結合前面的方法來完成。攝影軟體 **@picn2k** 的輔助線能夠讓我們調整好相機的仰角確保整個畫面是正的，以及九宮格能將物體對準在畫面相同的位置。
 
 | 正面且對準 | 歪斜 | 仰角 |
 | -------- | -------- | -------- | 
